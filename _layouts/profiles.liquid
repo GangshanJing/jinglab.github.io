@@ -1,36 +1,136 @@
 ---
 layout: page
 ---
+<!-- 在head中引入Swiper资源（如果还没引入的话） -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+
+<style>
+  .swiper-container {
+    width: 100%;
+    height: 500px; /* 设置固定高度 */
+    margin-bottom: 2rem;
+    clear: both; /* 清除浮动 */
+  }
+
+  swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* 覆盖figure模板和Bootstrap冲突 */
+  swiper-slide figure, 
+  swiper-slide .img-fluid {
+    width: 100% !important;
+    height: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+  }
+
+  /* 新增网格布局样式 */
+  .profile-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 2rem;
+  }
+  .profile-card {
+    text-align: center;
+  }
+  .profile-card img {
+    width: 150px !important;
+    height: 150px !important;
+    border-radius: {% if member.image_circular %}50%{% else %}5px{% endif %};
+  }
+
+
+.alumni-section {
+  margin-top: 4rem;
+}
+.alumni-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 15px;
+}
+.alumni-item {
+  padding: 12px 15px;
+  background: var(--global-bg-color-secondary);
+  border-radius: 4px;
+  line-height: 1.6;
+}
+.alumni-meta {
+  color: var(--global-text-color-light);
+}
+
+
+</style>
+
 <div class="post">
   <article>
-    {% if page.profiles %}
-      {% for profile in page.profiles %}
-        <hr>
-        <div class="profile float-{% if profile.align == 'left' %}left{% else %}right{% endif %}">
-          {% if profile.image %}
-            {% assign profile_image_path = profile.image | prepend: 'assets/img/' %}
-            {% if profile.image_circular %}
-              {% assign profile_image_class = 'img-fluid z-depth-1 rounded-circle' %}
-            {% else %}
-              {% assign profile_image_class = 'img-fluid z-depth-1 rounded' %}
-            {% endif %}
-            {% capture sizes %}(min-width: {{ site.max_width }}) {{ site.max_width | minus: 30 | times: 0.3}}px, (min-width: 576px) 30vw, 95vw"{% endcapture %}
-            {% include figure.liquid loading="eager" path=profile_image_path class=profile_image_class sizes=sizes alt=profile.image %}
-          {% endif %}
-          {% if profile.more_info %}
-            <div class="more-info">{{ profile.more_info }}</div>
-          {% endif %}
-        </div>
+    <div class="main-content">
+      <!-- 修正后的Swiper结构 -->
+      <div class="swiper-container">
+        <swiper-container 
+    autoplay-delay="3000"
+    autoplay-disable-on-interaction="false"
+    loop="true"
+    navigation="true"
+    pagination="true"
+    style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff"
+  >
+ <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/people/group1.jpg" class="img-fluid rounded z-depth-1" %}</swiper-slide>
+      <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/people/group2.jpg" class="img-fluid rounded z-depth-1" %}</swiper-slide>
+      <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/people/group3.jpg" class="img-fluid rounded z-depth-1" %}</swiper-slide>
+      <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/people/group4.jpg" class="img-fluid rounded z-depth-1" %}</swiper-slide>
+      <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/people/group5.jpg" class="img-fluid rounded z-depth-1" %}</swiper-slide>
+        </swiper-container>
+      </div>
 
-        <div class="clearfix">
-          {% if profile.content %}
-            {% capture profile_content %}{% include_relative {{ profile.content }} %}{% endcapture %}
-            {{ profile_content | markdownify }}
-          {% else %}
-            {{ content }}
-          {% endif %}
+    <!-- 新增网格化人员展示 -->
+    {% if page.groups %}
+      {% for group in page.groups %}
+        <h2 class="group-title">{{ group.title }}</h2>
+        <div class="profile-grid">
+          {% for member in group.members %}
+            <div class="profile-card">
+              <img 
+                src="{{ member.image | prepend: 'assets/img/people/' | relative_url }}" 
+                alt="{{ member.name }}"
+                style="border-radius: {% if member.image_circular %}50%{% else %}8px{% endif %};"
+              >
+              <h3>{{ member.name }}</h3>
+              <p>{{ member.role }}</p>
+              {% if member.more_info %}
+                <div class="more-info">{{ member.more_info }}</div>
+              {% endif %}
+            </div>
+          {% endfor %}
         </div>
       {% endfor %}
+
+
+      <!-- 新增 Alumni 区块 -->
+<div class="alumni-section">
+  <h2 class="group-title">Alumni</h2>
+  <div class="alumni-list">
+    {% assign sorted_alumni = page.alumni | sort: "year" %}
+    {% assign grouped_alumni = sorted_alumni | group_by: "year" %}
+    {% for group in grouped_alumni %}
+      <div class="alumni-row">
+        <div class="alumni-year">{{ group.name }}</div>
+        <div class="alumni-members">
+          {% for alum in group.items %}
+            <div class="alumni-item">
+              <span class="alumni-name">{{ alum.name }}</span>
+              <span class="alumni-affiliation">- {{ alum.affiliation }}</span>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
     {% endif %}
   </article>
 </div>

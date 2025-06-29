@@ -3,8 +3,9 @@ layout: page
 title: project 7
 description: with background image
 img: assets/img/4.jpg
-importance: 1
-category: work
+redirect: https://unsplash.com
+importance: 7
+category: fun
 related_publications: true
 ---
 

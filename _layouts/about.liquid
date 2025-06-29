@@ -15,8 +15,20 @@ layout: default
   </header>
 
   <article>
+  <div class="main-content">
+  <div class="clearfix">
+   <div class="content-left">  <!-- 左侧容器 -->
+      <div>{{ content }}</div>  <!-- 正文 -->
+        <!-- 新增 Swiper 轮播 -->
+    <swiper-container keyboard="true" navigation="true" pagination="true" pagination-clickable="true" pagination-dynamic-bullets="true" rewind="true">
+      <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/dexteroushand.jpg" class="img-fluid rounded z-depth-1" %}</swiper-slide>
+      <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/localization.jpg" class="img-fluid rounded z-depth-1" %}</swiper-slide>
+      <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/trafficnetwork.png" class="img-fluid rounded z-depth-1" %}</swiper-slide>
+      <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/formation.jpg" class="img-fluid rounded z-depth-1" %}</swiper-slide>
+    </swiper-container>
+  </div>
     {% if page.profile %}
-      <div class="profile float-{% if page.profile.align == 'left' %}left{% else %}right{% endif %}">
+      <div class="profile">  <!-- 关键修改点 -->
         {% if page.profile.image %}
           {% assign profile_image_path = page.profile.image | prepend: 'assets/img/' %}
           {% if page.profile.image_circular %}
@@ -37,13 +49,15 @@ layout: default
         {% endif %}
       </div>
     {% endif %}
+    </div>
+  </div>
 
-    <div class="clearfix">{{ content }}</div>
+   
 
     <!-- News -->
     {% if page.announcements and page.announcements.enabled %}
       <h2>
-        <a href="{{ '/news/' | relative_url }}" style="color: inherit">news</a>
+        <a href="{{ '/news/' | relative_url }}" style="color: inherit">News</a>
       </h2>
       {% include news.liquid limit=true %}
     {% endif %}
@@ -59,7 +73,7 @@ layout: default
     <!-- Selected papers -->
     {% if page.selected_papers %}
       <h2>
-        <a href="{{ '/publications/' | relative_url }}" style="color: inherit">selected publications</a>
+        <a href="{{ '/publications/' | relative_url }}" style="color: inherit">Selected Publications</a>
       </h2>
       {% include selected_papers.liquid %}
     {% endif %}
