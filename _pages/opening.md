@@ -14,7 +14,7 @@ nav_order: 7
     <li><strong>Start Date:</strong> Fall 2026</li>
     <li><strong>Research Area:</strong> Machine Learning for Networked Robotic Systems</li>
     <li><strong>Major:</strong> Automation, Robotics Engineering, Applied Mathematics, Computer Science, or related fields</li>
-    <li><strong>Academic Background:</strong> Solid foundation in mathematics and machine learning is preferred</li>
+    <li><strong>Academic Background:</strong> Solid foundat  ion in mathematics and machine learning is preferred</li>
     <li><strong>Motivation:</strong> Strong interest in machine learning and robotics</li>
   </ul>
   <p style="margin-top:1.5rem; font-size:1.05rem; color:#054469;">
