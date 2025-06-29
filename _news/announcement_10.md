@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-**An Open Position for PhD Student.** We have a PhD student position opening for 3rd year undergraduate students. [Click here to see the details](http://localhost:8080/opening/)
+**An Open Position for PhD Student.** We have a PhD student position opening for 3rd year undergraduate students. [Click here to see the details](https://gangshanjing.github.io/opening/)
