@@ -4,7 +4,8 @@ layout: default
 <style>
 .swiper-container {
   width: 100%;
-  height: 350px;
+  aspect-ratio: 16/7;
+  max-height: 350px;
   margin-bottom: 5rem;
   clear: both;
   position: relative;
@@ -12,16 +13,24 @@ layout: default
 }
 @media (max-width: 600px) {
   .swiper-container {
-    height: 45vw;
+    aspect-ratio: 1.8/1;
     min-height: 180px;
     max-height: 300px;
   }
 }
+swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  height: 100%;
+}
 swiper-slide img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   display: block;
+  background: #fff;
 }
 </style>
 <div class="post">
