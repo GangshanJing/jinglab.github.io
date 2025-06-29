@@ -1,6 +1,29 @@
 ---
 layout: default
 ---
+<style>
+.swiper-container {
+  width: 100%;
+  height: 350px;
+  margin-bottom: 5rem;
+  clear: both;
+  position: relative;
+  z-index: 1;
+}
+@media (max-width: 600px) {
+  .swiper-container {
+    height: 45vw;
+    min-height: 180px;
+    max-height: 300px;
+  }
+}
+swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+</style>
 <div class="post">
   <header class="post-header">
     <h1 class="post-title">
@@ -20,12 +43,14 @@ layout: default
    <div class="content-left">  <!-- 左侧容器 -->
       <div>{{ content }}</div>  <!-- 正文 -->
         <!-- 新增 Swiper 轮播 -->
-    <swiper-container keyboard="true" navigation="true" pagination="true" pagination-clickable="true" pagination-dynamic-bullets="true" rewind="true">
-      <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/dexteroushand.jpg" class="img-fluid rounded z-depth-1" %}</swiper-slide>
-      <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/localization.jpg" class="img-fluid rounded z-depth-1" %}</swiper-slide>
-      <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/trafficnetwork.png" class="img-fluid rounded z-depth-1" %}</swiper-slide>
-      <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/formation.jpg" class="img-fluid rounded z-depth-1" %}</swiper-slide>
-    </swiper-container>
+    <div class="swiper-container">
+      <swiper-container keyboard="true" navigation="true" pagination="true" pagination-clickable="true" pagination-dynamic-bullets="true" rewind="true">
+        <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/dexteroushand.jpg" class="img-fluid rounded z-depth-1" %}</swiper-slide>
+        <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/localization.jpg" class="img-fluid rounded z-depth-1" %}</swiper-slide>
+        <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/trafficnetwork.png" class="img-fluid rounded z-depth-1" %}</swiper-slide>
+        <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/formation.jpg" class="img-fluid rounded z-depth-1" %}</swiper-slide>
+      </swiper-container>
+    </div>
   </div>
     {% if page.profile %}
       <div class="profile">  <!-- 关键修改点 -->
@@ -34,15 +59,10 @@ layout: default
           {% if page.profile.image_circular %}
             {% assign profile_image_class = 'img-fluid z-depth-1 rounded-circle' %}
           {% else %}
-            {% assign profile_image_class = 'img-fluid z-depth-1
-      rounded' %}
+            {% assign profile_image_class = 'img-fluid z-depth-1 rounded' %}
           {% endif %}
-          {% capture sizes %}(min-width: {{ site.max_width }}) {{ site.max_width | minus: 30 | times: 0.3}}px, (min-width: 576px)
-      30vw, 95vw"{% endcapture %}
-          {%
-            include figure.liquid loading="eager" path=profile_image_path class=profile_image_class sizes=sizes alt=page.profile.image
-            cache_bust=true
-          %}
+          {% capture sizes %}(min-width: {{ site.max_width }}) {{ site.max_width | minus: 30 | times: 0.3}}px, (min-width: 576px) 30vw, 95vw"{% endcapture %}
+          {% include figure.liquid loading="eager" path=profile_image_path class=profile_image_class sizes=sizes alt=page.profile.image cache_bust=true %}
         {% endif %}
         {% if page.profile.more_info %}
           <div class="more-info">{{ page.profile.more_info }}</div>
@@ -55,6 +75,7 @@ layout: default
    
 
     <!-- News -->
+    <div style="clear:both; margin-top:5rem;"></div>
     {% if page.announcements and page.announcements.enabled %}
       <h2>
         <a href="{{ '/news/' | relative_url }}" style="color: inherit">News</a>
