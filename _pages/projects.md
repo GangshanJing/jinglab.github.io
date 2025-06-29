@@ -5,7 +5,7 @@ permalink: /research/
 description: Our interested topics and detailed works
 nav: true
 nav_order: 2
-display_categories: [Topics]
+display_categories: [Topics, Works]
 horizontal: false
 ---
 
