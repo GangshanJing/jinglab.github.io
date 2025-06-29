@@ -2,11 +2,13 @@
 layout: default
 ---
 <style>
+body {
+  overflow-x: hidden;
+}
 .swiper-container {
   width: 100%;
   aspect-ratio: 16/7;
-  max-height: 350px;
-  margin-bottom: 5rem;
+  margin-bottom: 0.5rem;
   clear: both;
   position: relative;
   z-index: 1;
@@ -18,6 +20,12 @@ layout: default
     max-height: 300px;
   }
 }
+.main-content, .content-left {
+  width: 100%;
+  max-width: 100vw;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
 swiper-slide {
   display: flex;
   align-items: center;
@@ -26,11 +34,14 @@ swiper-slide {
   height: 100%;
 }
 swiper-slide img {
-  width: 100%;
-  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
   object-fit: contain;
   display: block;
   background: #fff;
+  margin: auto;
 }
 </style>
 <div class="post">
@@ -53,7 +64,7 @@ swiper-slide img {
       <div>{{ content }}</div>  <!-- 正文 -->
         <!-- 新增 Swiper 轮播 -->
     <div class="swiper-container">
-      <swiper-container keyboard="true" navigation="true" pagination="true" pagination-clickable="true" pagination-dynamic-bullets="true" rewind="true">
+      <swiper-container keyboard="true" navigation="false" pagination="true" pagination-clickable="true" pagination-dynamic-bullets="true" rewind="true" autoplay="true" autoplay-delay="3000">
         <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/dexteroushand.jpg" class="img-fluid rounded z-depth-1" %}</swiper-slide>
         <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/localization.jpg" class="img-fluid rounded z-depth-1" %}</swiper-slide>
         <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/trafficnetwork.png" class="img-fluid rounded z-depth-1" %}</swiper-slide>
@@ -84,7 +95,7 @@ swiper-slide img {
    
 
     <!-- News -->
-    <div style="clear:both; margin-top:5rem;"></div>
+    <div style="clear:both; margin-top:0.5rem;"></div>
     {% if page.announcements and page.announcements.enabled %}
       <h2>
         <a href="{{ '/news/' | relative_url }}" style="color: inherit">News</a>
