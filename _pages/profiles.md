@@ -113,7 +113,7 @@ groups:
         image: LiufanTan.jpg
         image_circular: false
         more_info: >
-          VLA-Based Robotic Manipulation
+          Learning-Based Manipulation
 
   - title: Graduate Students/Localization
     columns: 4

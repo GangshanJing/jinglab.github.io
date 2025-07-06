@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-**An Open Position for PhD Student.** We have a PhD student position opening for 3rd year undergraduate students. [Click here to see the details](https://jinglab.net/opening/)
+**An Open Position for PhD Student.** We have a PhD student position opening for undergraduate students. [Click here to see the details](https://jinglab.net/opening/)
