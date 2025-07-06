@@ -88,10 +88,10 @@ ninja.data = [{
           description: "",
           section: "News",handler: () => {
               window.location.href = "/news/announcement_6/";
-            },},{id: "news-prof-jing-gave-an-invited-talk-graph-rigidity-theory-and-its-application-on-multi-agent-coordination-problems-in-the-2025-academic-annual-conference-of-the-automation-and-instrumentation-association-of-the-three-provinces-and-one-municipality-in-southwest-china",
-          title: 'Prof. Jing gave an invited talk “Graph Rigidity Theory and its Application on...',
+            },},{id: "news-prof-jing-gave-an-invited-talk-graph-rigidity-theory-and-its-application-to-multi-agent-coordination-problems-in-the-2025-academic-annual-conference-of-the-automation-and-instrumentation-association-of-the-three-provinces-and-one-municipality-in-southwest-china",
+          title: 'Prof. Jing gave an invited talk “Graph Rigidity Theory and its Application to...',
           description: "",
-          section: "News",},{id: "news-an-open-position-for-phd-student-we-have-a-phd-student-position-opening-for-3rd-year-undergraduate-students-click-here-to-see-the-details",
+          section: "News",},{id: "news-an-open-position-for-phd-student-we-have-a-phd-student-position-opening-for-undergraduate-students-click-here-to-see-the-details",
           title: 'An Open Position for PhD Student. We have a PhD student position opening...',
           description: "",
           section: "News",},{id: "projects-to-appear",
