@@ -91,8 +91,8 @@ ninja.data = [{
             },},{id: "news-prof-jing-gave-an-invited-talk-graph-rigidity-theory-and-its-application-to-multi-agent-coordination-problems-in-the-2025-academic-annual-conference-of-the-automation-and-instrumentation-association-of-the-three-provinces-and-one-municipality-in-southwest-china",
           title: 'Prof. Jing gave an invited talk “Graph Rigidity Theory and its Application to...',
           description: "",
-          section: "News",},{id: "news-an-open-position-for-phd-student-we-have-a-phd-student-position-opening-for-undergraduate-students-click-here-to-see-the-details",
-          title: 'An Open Position for PhD Student. We have a PhD student position opening...',
+          section: "News",},{id: "news-open-phd-student-position-we-have-a-phd-student-position-opening-for-undergraduate-students-click-here-to-see-the-details",
+          title: 'Open PhD Student Position. We have a PhD student position opening for undergraduate...',
           description: "",
           section: "News",},{id: "projects-to-appear",
           title: 'To appear',
@@ -101,7 +101,7 @@ ninja.data = [{
               window.location.href = "/projects/10_project/";
             },},{id: "projects-formation-control",
           title: 'Formation Control',
-          description: "Cooperatively form and maneuver a shape to perform tasks in complex environments.",
+          description: "Cooperatively form and maneuver a formation to perform tasks in complex environments.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/1_project/";
             },},{id: "projects-network-localization",
