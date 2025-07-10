@@ -18,7 +18,7 @@ profile:
     <p>A414, Information Technology Building</p>
     <p>School of Automation</p>
     <p>Chongqing University Huxi Campus</p>
-    <p>Shapingba, Chongqing, 401331, China</p>
+    <p>jinggangshan@cqu.edu.cn</p>
 
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page

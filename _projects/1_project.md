@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Formation Control
-description: Cooperatively form and maneuver a shape to perform tasks in complex environments.
+description: Cooperatively form and maneuver a formation to perform tasks in complex environments.
 img: assets/img/formation.jpg
 importance: 1
 category: Topics
@@ -33,9 +33,6 @@ We proposed two new graph rigidity theories, i.e., weak rigidity theory {%cite j
 
 How to react to dynamic environments in real-time is known as an open problem in the robotics society. We are developing real-time decision making methods for a multi-agent formation to change its shape when interacting with the complex environments. Related topcis include autonomous shape transformation, motion planning in the presence of moving obstacles, human-formation interaction, etc.
 
-You can also put regular text between your rows of images, even citations {% cite einstein1950meaning %}.
-Say you wanted to write a bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, _bled_ for your project, and then... you reveal its glory in the next row of images.
 
 <div class="row justify-content-sm-center">
     <div class="col-sm-8 mt-2 mt-md-0">

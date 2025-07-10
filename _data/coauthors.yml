@@ -32,3 +32,24 @@
 "planck":
   - firstname: ["Max"]
     url: https://en.wikipedia.org/wiki/Max_Planck
+
+
+"wang":
+  - firstname: ["Long"]
+    url: https://www.ai.pku.edu.cn/en/info/1406/1812.htm
+
+"chakrabortty":
+  - firstname: ["Aranya"]
+    url: https://achakra2.wordpress.ncsu.edu/
+
+"dai":
+  - firstname: ["Ran"]
+    url: https://engineering.purdue.edu/AAE/people/ptProfile?resource_id=243160
+
+"bai":
+  - firstname: ["He"]
+    url: https://ceat.okstate.edu/mae/faculty-staff/faculty-bios/he-bai.html
+
+"mesbahi":
+  - firstname: ["Mehran"]
+    url: https://www.aa.washington.edu/facultyfinder/mehran-mesbahi
