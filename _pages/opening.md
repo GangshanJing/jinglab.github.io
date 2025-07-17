@@ -28,8 +28,8 @@ nav_order: 7
     <p>Dear Prospective Students,</p>
     <p>Thank you for your interest in joining us! Our group is a part of the Systems Intelligence and Control Team (系统智能与控制团队). We focus on conducting innovative academic research associated with network systems. Although we can provide platforms for both theoretical research and engineering practice, the main emphasis is always on innovation. Therefore, our group is best suited for students who want to pursue success on academics. </p>
     <p>We are actively seeking self-motivated students and postdoctoral researchers. Applicants from diverse backgrounds, especially mathematics, automation, and computer science, are encouraged to apply.<br><strong>Note: PhD positions are usually limited unless specifically announced on this page.</strong></p>
-    <p>If you are interested, please send your CV to <a href="mailto:jinggangshan@cqu.edu.cn" style="color:#054469; text-decoration:underline;">jinggangshan@cqu.edu.cn</a>. For graduate (PhD or Master) applications, please attach all your academic transcripts. </p>
+    <p>If you are interested, please send your CV as well as your academic transcripts to <a href="mailto:jinggangshan@cqu.edu.cn" style="color:#054469; text-decoration:underline;">jinggangshan@cqu.edu.cn</a>.</p>
     <p>Due to the large number of inquiries, only shortlisted candidates will be contacted. Thank you for your understanding.</p>
-    <p style="margin-top:2rem;">Best wishes in your position search!<br>— Gangshan Jing</p>
+    <p style="margin-top:2rem;">Best wishes on your position search!<br>— Gangshan Jing</p>
   </div>
 </div>
