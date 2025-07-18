@@ -1,6 +1,49 @@
 ---
 layout: default
 ---
+<style>
+body {
+  overflow-x: hidden;
+}
+.swiper-container {
+  width: 100%;
+  aspect-ratio: 16/7;
+  margin-bottom: 0.5rem;
+  clear: both;
+  position: relative;
+  z-index: 1;
+}
+@media (max-width: 600px) {
+  .swiper-container {
+    aspect-ratio: 1.8/1;
+    min-height: 180px;
+    max-height: 300px;
+  }
+}
+.main-content, .content-left {
+  width: 100%;
+  max-width: 100vw;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  height: 100%;
+}
+swiper-slide img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  background: #fff;
+  margin: auto;
+}
+</style>
 <div class="post">
   <header class="post-header">
     <h1 class="post-title">
@@ -15,35 +58,47 @@ layout: default
   </header>
 
   <article>
+  <div class="main-content">
+  <div class="clearfix">
+   <div class="content-left">  <!-- 左侧容器 -->
+      <div>{{ content }}</div>  <!-- 正文 -->
+        <!-- 新增 Swiper 轮播 -->
+    <div class="swiper-container">
+      <swiper-container keyboard="true" navigation="false" pagination="true" pagination-clickable="true" pagination-dynamic-bullets="true" rewind="true" autoplay="true" autoplay-delay="3000">
+        <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/dexteroushand.jpg" class="img-fluid rounded z-depth-1" %}</swiper-slide>
+        <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/localization.jpg" class="img-fluid rounded z-depth-1" %}</swiper-slide>
+        <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/trafficnetwork.png" class="img-fluid rounded z-depth-1" %}</swiper-slide>
+        <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/formation.jpg" class="img-fluid rounded z-depth-1" %}</swiper-slide>
+      </swiper-container>
+    </div>
+  </div>
     {% if page.profile %}
-      <div class="profile float-{% if page.profile.align == 'left' %}left{% else %}right{% endif %}">
+      <div class="profile">  <!-- 关键修改点 -->
         {% if page.profile.image %}
           {% assign profile_image_path = page.profile.image | prepend: 'assets/img/' %}
           {% if page.profile.image_circular %}
             {% assign profile_image_class = 'img-fluid z-depth-1 rounded-circle' %}
           {% else %}
-            {% assign profile_image_class = 'img-fluid z-depth-1
-      rounded' %}
+            {% assign profile_image_class = 'img-fluid z-depth-1 rounded' %}
           {% endif %}
-          {% capture sizes %}(min-width: {{ site.max_width }}) {{ site.max_width | minus: 30 | times: 0.3}}px, (min-width: 576px)
-      30vw, 95vw"{% endcapture %}
-          {%
-            include figure.liquid loading="eager" path=profile_image_path class=profile_image_class sizes=sizes alt=page.profile.image
-            cache_bust=true
-          %}
+          {% capture sizes %}(min-width: {{ site.max_width }}) {{ site.max_width | minus: 30 | times: 0.3}}px, (min-width: 576px) 30vw, 95vw"{% endcapture %}
+          {% include figure.liquid loading="eager" path=profile_image_path class=profile_image_class sizes=sizes alt=page.profile.image cache_bust=true %}
         {% endif %}
         {% if page.profile.more_info %}
           <div class="more-info">{{ page.profile.more_info }}</div>
         {% endif %}
       </div>
     {% endif %}
+    </div>
+  </div>
 
-    <div class="clearfix">{{ content }}</div>
+   
 
     <!-- News -->
+    <div style="clear:both; margin-top:0.5rem;"></div>
     {% if page.announcements and page.announcements.enabled %}
       <h2>
-        <a href="{{ '/news/' | relative_url }}" style="color: inherit">news</a>
+        <a href="{{ '/news/' | relative_url }}" style="color: inherit">News</a>
       </h2>
       {% include news.liquid limit=true %}
     {% endif %}
@@ -59,7 +114,7 @@ layout: default
     <!-- Selected papers -->
     {% if page.selected_papers %}
       <h2>
-        <a href="{{ '/publications/' | relative_url }}" style="color: inherit">selected publications</a>
+        <a href="{{ '/publications/' | relative_url }}" style="color: inherit">Selected Publications</a>
       </h2>
       {% include selected_papers.liquid %}
     {% endif %}

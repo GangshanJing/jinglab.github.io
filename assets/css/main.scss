@@ -23,3 +23,83 @@ $max-content-width: {{ site.max_width }};
   "tabler-icons/tabler-icons-filled.scss",
   "tabler-icons/tabler-icons-outline.scss"
 ;
+
+/* Swiper 容器样式 */
+swiper-container {
+  width: 100%;
+  max-width: 800px;  /* 限制最大宽度 */
+  height: 450px;
+  margin: 20px auto; /* 居中并增加外边距 */
+  position: relative; /* 修正绝对定位问题 */
+  z-index: 1;        /* 确保层级高于背景 */
+
+  /* 图片自适应 */
+  .swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+  swiper-container {
+    height: 300px;
+  }
+}
+
+@media (max-width: 576px) {
+  swiper-container {
+    height: 200px;
+  }
+}
+
+/* 调整轮播图片与Profile图片的排列方式*/
+
+.clearfix {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+  /* 新增以下两行 */
+  flex-direction: row; /* 默认顺序 */
+  justify-content: space-between;   /* 使左右两侧均匀分布 */
+    /* 新增：左侧容器（正文+Swiper）的嵌套布局 */
+    > div:first-child {
+      flex: 1;                // 占据剩余空间
+      display: flex;
+      flex-direction: column;
+      gap: 0px;              // 控制正文与 Swiper 的垂直间距
+    }
+}
+
+.profile {
+  flex: 0 0 400px;
+  float: none !important;
+  /* 可选：调整头像右侧间距 */
+  margin-left: 0; 
+  order: 2; 
+    // 确保人像图片填满容器
+    img {
+      width: 60%;
+      height: auto;
+      max-height: 500px;  // 可选：限制最大高度
+      object-fit: cover;
+      border-radius: 8px;  // 可选：圆角
+    }
+}
+
+.swiper-wrapper {
+  width: 100%; 
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+  .clearfix {
+    flex-direction: column;
+    > div:first-child { order: 2; }  // 移动端时正文+Swiper 在下
+  }
+  .profile { 
+    flex: 1; 
+    order: 1;                        // 人像在上
+  }
+}

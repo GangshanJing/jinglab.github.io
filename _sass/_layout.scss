@@ -32,11 +32,97 @@ body.sticky-bottom-footer {
 }
 
 // Profile
-.profile {
-  img {
-    width: 100%;
+
+
+.profile-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(300px, 1fr)) !important;
+
+
+  .profile-card {
+    text-align: center;
+    img {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      margin-bottom: 1rem;
+      &.rounded-circle { border-radius: 50%; }
+    }
+    .more-info {
+      font-size: 0.9rem;
+      color: var(--global-text-color-light);
+    }
   }
 }
+
+.group-title {
+  font-size: 1.5rem;
+  border-bottom: 2px solid var(--global-divider-color);
+  padding-bottom: 0.5rem;
+  margin-top: 3rem;
+}
+
+
+/* Alumni 专用样式 */
+.alumni-section {
+  .group-title {
+    @extend .group-title; // 继承现有标题样式
+  }
+
+  .alumni-list {
+    display: block; // 改为 block 布局，不再使用 grid
+    @media (max-width: 768px) {
+      display: block;
+    }
+  }
+
+  .alumni-row {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+    padding: 0.5rem;
+    background: var(--global-bg-color-secondary);
+    border-radius: 4px;
+    transition: transform 0.2s;
+    &:hover {
+      transform: translateX(5px);
+      background: rgba(var(--global-theme-color-rgb), 0.05);
+    }
+  }
+
+  .alumni-year {
+    flex: 0 0 120px; // 固定宽度
+    font-weight: bold;
+    color: var(--global-text-color);
+    padding-right: 1rem;
+    border-right: 2px solid var(--global-divider-color);
+    text-align: center;
+  }
+
+  .alumni-members {
+    flex: 1; // 占据剩余空间
+    display: flex;
+    flex-wrap: wrap; // 允许多行显示
+    gap: 1rem; // 人员之间的间距
+    padding-left: 1rem;
+  }
+
+  .alumni-item {
+    background: transparent; // 移除单独背景
+    padding: 0.3rem 0;
+    line-height: 1.6;
+  }
+
+  .alumni-name {
+    font-weight: 500;
+  }
+
+  .alumni-meta {
+    color: var(--global-text-color-light);
+  }
+}
+
+
 
 // TODO: redefine content layout.
 
