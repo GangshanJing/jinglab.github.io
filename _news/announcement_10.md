@@ -6,4 +6,4 @@ related_posts: false
 pin: true
 ---
 
-**Open PhD Student Position.** We have a PhD student position opening for undergraduate students. [Click here to see the details.](https://jinglab.net/opening/)
+**Open PhD Student Position.** We have a PhD student position opening for undergraduate students. [See more details.](https://jinglab.net/opening/)
