@@ -4,7 +4,7 @@ permalink: /cv/
 title: CV
 nav: true
 nav_order: 5
-cv_pdf: CV-Gangshan_Jing.pdf # you can also use external links here
+cv_pdf: CV-Gangshan Jing-2025Dec.pdf # you can also use external links here
 toc:
   sidebar: left
 ---

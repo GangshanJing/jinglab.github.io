@@ -6,6 +6,7 @@ description: Positions opening for application.
 nav: true
 nav_order: 7
 ---
+<!--
 
 <div class="opening-section" style="margin-bottom:2.5rem; padding:2rem; border-radius:1rem; box-shadow:0 2px 8px rgba(0,0,0,0.04);">
   <h2 style="color:#054469; margin-top:0;">🎓 Open Positions</h2>
@@ -21,6 +22,10 @@ nav_order: 7
     <strong>How to apply:</strong> Please send your CV and transcripts to <a href="mailto:jinggangshan@cqu.edu.cn" style="color:#054469; text-decoration:underline;">jinggangshan@cqu.edu.cn</a>.
   </p>
 </div>
+
+-->
+
+
 
 <div class="opening-section" style="padding:2rem; border-radius:1rem; box-shadow:0 2px 8px rgba(0,0,0,0.04);">
   <h2 style="color:#054469; margin-top:0;">📬 A Letter to Applicants</h2>
