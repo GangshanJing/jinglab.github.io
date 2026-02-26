@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Jinpeng Huang presented our work "On the Equivalence between Signed Angle Rigidity and Bearing Rigidity" at CDC, in Rio de Janeiro, Brazil.
+Jinpeng presented our work "On the Equivalence between Signed Angle Rigidity and Bearing Rigidity" at CDC, in Rio de Janeiro, Brazil.

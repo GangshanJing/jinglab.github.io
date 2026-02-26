@@ -65,10 +65,42 @@ swiper-slide img {
         <!-- 新增 Swiper 轮播 -->
     <div class="swiper-container">
       <swiper-container keyboard="true" navigation="false" pagination="true" pagination-clickable="true" pagination-dynamic-bullets="true" rewind="true" autoplay="true" autoplay-delay="3000">
-        <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/dexteroushand.jpg" class="img-fluid rounded z-depth-1" %}</swiper-slide>
-        <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/localization.jpg" class="img-fluid rounded z-depth-1" %}</swiper-slide>
-        <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/trafficnetwork.png" class="img-fluid rounded z-depth-1" %}</swiper-slide>
-        <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/formation.jpg" class="img-fluid rounded z-depth-1" %}</swiper-slide>
+        {% assign link0 = page.images.links[0] %}
+        <swiper-slide>
+          {% if link0 %}
+            <a href="{{ link0 | relative_url }}">{% include figure.liquid loading="eager" path="assets/img/dexteroushand.jpg" class="img-fluid rounded z-depth-1" %}</a>
+          {% else %}
+            {% include figure.liquid loading="eager" path="assets/img/dexteroushand.jpg" class="img-fluid rounded z-depth-1" %}
+          {% endif %}
+        </swiper-slide>
+
+        {% assign link1 = page.images.links[1] %}
+        <swiper-slide>
+          {% if link1 %}
+            <a href="{{ link1 | relative_url }}">{% include figure.liquid loading="eager" path="assets/img/localization.jpg" class="img-fluid rounded z-depth-1" %}</a>
+          {% else %}
+            {% include figure.liquid loading="eager" path="assets/img/localization.jpg" class="img-fluid rounded z-depth-1" %}
+          {% endif %}
+        </swiper-slide>
+
+        {% assign link2 = page.images.links[2] %}
+        <swiper-slide>
+          {% if link2 %}
+            <a href="{{ link2 | relative_url }}">{% include figure.liquid loading="eager" path="assets/img/trafficnetwork.png" class="img-fluid rounded z-depth-1" %}</a>
+          {% else %}
+            {% include figure.liquid loading="eager" path="assets/img/trafficnetwork.png" class="img-fluid rounded z-depth-1" %}
+          {% endif %}
+        </swiper-slide>
+
+        {% assign link3 = page.images.links[3] %}
+        <swiper-slide>
+          {% if link3 %}
+            <a href="{{ link3 | relative_url }}">{% include figure.liquid loading="eager" path="assets/img/formation.jpg" class="img-fluid rounded z-depth-1" %}</a>
+          {% else %}
+            {% include figure.liquid loading="eager" path="assets/img/formation.jpg" class="img-fluid rounded z-depth-1" %}
+          {% endif %}
+        </swiper-slide>
+
       </swiper-container>
     </div>
   </div>
@@ -86,6 +118,12 @@ swiper-slide img {
         {% endif %}
         {% if page.profile.more_info %}
           <div class="more-info">{{ page.profile.more_info }}</div>
+        {% endif %}
+        <!-- Social icons in profile card -->
+        {% if page.social %}
+          <div class="profile-social">
+            <div class="contact-icons">{% include social.liquid %}</div>
+          </div>
         {% endif %}
       </div>
     {% endif %}
@@ -111,6 +149,12 @@ swiper-slide img {
       {% include latest_posts.liquid %}
     {% endif %}
 
+    <!-- Projects (approved projects list) -->
+    {% if page.approved_projects and page.approved_projects.enabled %}
+      <h2>Projects</h2>
+      {% include approved_projects.liquid %}
+    {% endif %}
+
     <!-- Selected papers -->
     {% if page.selected_papers %}
       <h2>
@@ -118,6 +162,8 @@ swiper-slide img {
       </h2>
       {% include selected_papers.liquid %}
     {% endif %}
+
+    
 
     <!-- Social -->
     {% if page.social %}

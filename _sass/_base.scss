@@ -201,8 +201,27 @@ ul.task-list input[type="checkbox"] {
     font-family: monospace;
 
     p {
-      display: inline-block;
+      display: block;
       margin: 0;
+
+      &:first-child {
+        font-weight: bold;
+      }
+    }
+  }
+
+  .profile-social {
+    margin-top: 1rem;
+
+    .contact-icons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+
+      a {
+        font-size: 2rem;
+        flex: 0 0 auto;
+      }
     }
   }
 }
@@ -213,6 +232,19 @@ ul.task-list input[type="checkbox"] {
 
 .profile.float-left {
   margin-right: 1rem;
+}
+
+/* Spacing for approved projects list on About page */
+.approved-projects {
+  margin-bottom: 2.5rem;
+  ul {
+    margin: 0;
+    padding-left: 1rem;
+    line-height: 1.7;
+  }
+  li {
+    margin-bottom: 0.5rem;
+  }
 }
 
 @media (min-width: 576px) {

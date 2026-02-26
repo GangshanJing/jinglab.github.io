@@ -5,12 +5,14 @@ description: Planning for cooperative motion of multiple robots or components.
 img: assets/img/dexteroushand.jpg
 importance: 4
 category: Topics
+related_publications: true
 ---
 
 We are interested in cooperative robotic motion planning, especially in cooperative manipulation.
 
-Although learning-based approaches are becoming most favored in robotic motion planning, we believe that the fundamental mathematical modeling for planning is still important and indispensable. Based on our research on multi-agent coordination control, we are developing novel approaches for cooperative manipulation.
+Although data-driven approaches are becoming most favored in robotic motion planning, we believe that the fundamental mathematical modeling for planning is still important and indispensable. Based on our research on multi-agent coordination control, we are developing novel approaches by combining mathematical formulation and machine learning techniques for efficient cooperative manipulation.
 
+The figures below show our recent work on multi-finger coordination for in-hand manipulation {%cite rong2026RAL%}.
 
 
 <div class="row justify-content-sm-center">

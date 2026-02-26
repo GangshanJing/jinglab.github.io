@@ -33,7 +33,7 @@ groups:
         more_info: >
           Scalable Formation Control
       - name: Jinpeng Huang (黄锦鹏)
-        role: Master Student
+        role: PhD Student (Joint with Prof. Yongduan Song)
         image: JinpengHuang.jpg
         image_circular: false
         more_info: >
