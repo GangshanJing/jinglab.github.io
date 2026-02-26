@@ -103,18 +103,16 @@ ninja.data = [{
           section: "News",},{id: "news-a-paper-intertemporal-optimization-of-formation-control-for-nonlinear-networks-with-multiple-constraints-a-reach-avoid-game-approach-has-been-accepted-by-ieee-transactions-on-automatic-control-and-published-online",
           title: 'A paper “Intertemporal Optimization of Formation Control for Nonlinear Networks With Multiple Constraints:...',
           description: "",
-          section: "News",},{id: "news-jinpeng-huang-presented-our-work-on-the-equivalence-between-signed-angle-rigidity-and-bearing-rigidity-at-cdc-in-rio-de-janeiro-brazil",
-          title: 'Jinpeng Huang presented our work “On the Equivalence between Signed Angle Rigidity and...',
+          section: "News",},{id: "news-jinpeng-presented-our-work-on-the-equivalence-between-signed-angle-rigidity-and-bearing-rigidity-at-cdc-in-rio-de-janeiro-brazil",
+          title: 'Jinpeng presented our work “On the Equivalence between Signed Angle Rigidity and Bearing...',
           description: "",
           section: "News",},{id: "news-our-survey-paper-learning-and-control-for-networked-systems-in-chinese-has-been-published-in-control-theory-amp-amp-applications-this-is-a-joint-work-with-prof-long-wang-at-peking-university-prof-dawei-shi-at-beijing-institute-of-technology-and-prof-tongwen-chen-at-university-of-alberta",
           title: 'Our survey paper “Learning and Control for Networked Systems“(in Chinese) has been published...',
           description: "",
-          section: "News",},{id: "projects-to-appear",
-          title: 'To appear',
-          description: "Our specific research works",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/10_project/";
-            },},{id: "projects-formation-control",
+          section: "News",},{id: "news-our-paper-rigidity-based-multi-finger-coordination-for-precise-in-hand-manipulation-of-force-sensitive-objects-has-been-accepted-by-ieee-robotics-and-automation-letters-congratulations-xinan",
+          title: 'Our paper “Rigidity-Based Multi-Finger Coordination for Precise In-Hand Manipulation of Force-Sensitive Objects” has...',
+          description: "",
+          section: "News",},{id: "projects-formation-control",
           title: 'Formation Control',
           description: "Cooperatively form and maneuver a formation to perform tasks in complex environments.",
           section: "Projects",handler: () => {
@@ -159,6 +157,11 @@ ninja.data = [{
           description: "another project with an image 🎉",
           section: "Projects",handler: () => {
               window.location.href = "/projects/9_project/";
+            },},{id: "projects-rigidity-based-precise-in-hand-manipulation-of-force-sensitive-objects",
+          title: 'Rigidity-Based Precise In-Hand Manipulation of Force-Sensitive Objects',
+          description: "We developed a force planning approach for multi-finger coordination based on graph rigidity theory. The planned forces enable precise in-hand manipulation of force-sensitive objects.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/in-hand_manipulation/";
             },},{
       id: 'light-theme',
       title: 'Change theme to light',
