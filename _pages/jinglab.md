@@ -52,7 +52,7 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-Our research centers on planning and decision making of networked robotic systems. The ongoing research topics include **formation control**, **network localization**, **multi-agent reinforcement learning**, and **cooperative manipulation**.
+Our research centers on planning and control of networked robotic systems. The ongoing research topics include **formation control**, **network localization**, **multi-agent reinforcement learning**, and **cooperative manipulation**.
 
 
 

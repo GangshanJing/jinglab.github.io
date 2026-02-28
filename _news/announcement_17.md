@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Our paper "[Rigidity-Based Multi-Finger Coordination for Precise In-Hand Manipulation of Force-Sensitive Objects](https://jinglab.net/in-hand_manipulation/)" has been accepted by IEEE Robotics and Automation Letters. Congratulations, Xinan!
+Our paper "[Rigidity-Based Multi-Finger Coordination for Precise In-Hand Manipulation of Force-Sensitive Objects](https://jinglab.net/projects/in-hand_manipulation/)" has been accepted by IEEE Robotics and Automation Letters. Congratulations, Xinan!
