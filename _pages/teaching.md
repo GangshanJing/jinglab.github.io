@@ -10,7 +10,7 @@ nav_order: 6
 <div class="teaching-section" style="margin-bottom:2.5rem; padding:2rem; border-radius:1rem; box-shadow:0 2px 8px rgba(0,0,0,0.04);">
   <h2 style="color:#054469; margin-top:0;">📢 Upcoming Course</h2>
   <p style="font-size:1.08rem; color:#054469;">I am excited to announce a new course titled <strong>Multi-Agent Systems</strong> (in English), which is expected to commence in the semester of 2026 Spring. This course is open to both undergraduate and graduate students. All are welcome!</p>
-  <p style="font-size:1.05rem; color:#054469;">Detailed information will be announced here soon.</p>
+  <p style="font-size:1.05rem; color:#054469;">This course is scheduled for weeks 15-18 of the current semester, meeting every Wednesday afternoon during periods 6-9 (or 2:25 PM - 6:05 PM), in room D1323 of the Huxi Campus Teaching Building.</p>
 </div>
 
 <div class="teaching-section" style="margin-bottom:2.5rem; padding:2rem; border-radius:1rem; box-shadow:0 2px 8px rgba(0,0,0,0.04);">

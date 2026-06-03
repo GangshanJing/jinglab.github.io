@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Our paper "Distributed Non-Uniform Scaling Control of Multi-Agent Formation via Matrix-Valued Constraints" has been accepted by IEEE Transactions on Automatic Control as a full paper.
+Our paper "[Distributed Non-Uniform Scaling Control of Multi-Agent Formation via Matrix-Valued Constraints](https://ieeexplore.ieee.org/abstract/document/11533876)" has been accepted by IEEE Transactions on Automatic Control as a full paper.

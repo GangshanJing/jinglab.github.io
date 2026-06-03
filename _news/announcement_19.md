@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Our paper "Distributed Non-Uniform Scaling Control of Multi-Agent Formation with Dynamic Agent Joining" has been accepted by IFAC World Congress 2026, to be held in Busan, Korea.
+Our paper "[Distributed Non-Uniform Scaling Control of Multi-Agent Formation with Dynamic Agent Joining](https://arxiv.org/abs/2605.29191)" has been accepted by IFAC World Congress 2026, to be held in Busan, Korea.
