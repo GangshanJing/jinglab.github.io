@@ -16,6 +16,7 @@ nav_order: 6
 <div class="teaching-section" style="margin-bottom:2.5rem; padding:2rem; border-radius:1rem; box-shadow:0 2px 8px rgba(0,0,0,0.04);">
   <h2 style="color:#054469; margin-top:0;">📚 Teaching History</h2>
   <ul style="font-size:1.08rem; color:#054469; line-height:1.8; margin-bottom:0;">
+    <li>Advanced Control Theory and Applications (three classes), Spring, 2026</li>
     <li>Advanced Control Theory and Applications (two classes), Spring, 2025</li>
     <li>Advanced Control Theory and Applications (one class), Spring, 2024</li>
     <li>Foundations of Control Theory, Fall, 2023</li>
