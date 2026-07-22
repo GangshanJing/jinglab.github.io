@@ -17,21 +17,44 @@ jobs:
     steps:
       - name: Checkout 🛎️
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - name: Setup Node.js ⚙️
         uses: actions/setup-node@v4
       - name: Install Prettier 💾
         run: npm install --save-dev --save-exact prettier @shopify/prettier-plugin-liquid
+      - name: Get changed files 📄
+        id: changed-files
+        run: |
+          if [ "${{ github.event_name }}" = "pull_request" ]; then
+            git fetch --no-tags origin "${{ github.event.pull_request.base.ref }}"
+            git diff --name-only --diff-filter=ACMRT "origin/${{ github.event.pull_request.base.ref }}"...HEAD > changed-files.txt
+          else
+            git diff --name-only --diff-filter=ACMRT "${{ github.event.before }}" "${{ github.sha }}" > changed-files.txt
+          fi
+          grep -E '\.(js|md|liquid|css|yml|yaml)$' changed-files.txt | sort -u > prettier-files.txt || true
+          if [ -s prettier-files.txt ]; then
+            echo "files=$(paste -sd ' ' prettier-files.txt)" >> $GITHUB_OUTPUT
+          else
+            echo "files=" >> $GITHUB_OUTPUT
+          fi
       - name: Prettier Check 🔎
         id: prettier
-        run: npx prettier . --check
+        run: |
+          if [ -z "${{ steps.changed-files.outputs.files }}" ]; then
+            echo "No relevant files changed, skipping Prettier check."
+            exit 0
+          fi
+          npx prettier ${{ steps.changed-files.outputs.files }} --check
       - name: Create diff 📝
-        # https://docs.github.com/en/actions/learn-github-actions/expressions#failure
         if: ${{ failure() }}
         run: |
-          npx prettier . --write
-          git diff -- . ':(exclude)package-lock.json' ':(exclude)package.json' > diff.txt
-          npm install -g diff2html-cli
-          diff2html -i file -s side -F diff.html -- diff.txt
+          if [ -n "${{ steps.changed-files.outputs.files }}" ]; then
+            npx prettier ${{ steps.changed-files.outputs.files }} --write
+            git diff -- . ':(exclude)package-lock.json' ':(exclude)package.json' > diff.txt
+            npm install -g diff2html-cli
+            diff2html -i file -s side -F diff.html -- diff.txt
+          fi
       - name: Upload html diff ⬆️
         id: artifact-upload
         if: ${{ failure() && steps.prettier.conclusion == 'failure' }}
