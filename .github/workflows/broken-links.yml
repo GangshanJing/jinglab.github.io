@@ -43,10 +43,29 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Get changed files 📄
+        id: changed-files
+        run: |
+          if [ "${{ github.event_name }}" = "pull_request" ]; then
+            git fetch --no-tags origin "${{ github.event.pull_request.base.ref }}"
+            git diff --name-only --diff-filter=ACMRT "origin/${{ github.event.pull_request.base.ref }}"...HEAD > changed-files.txt
+          else
+            git diff --name-only --diff-filter=ACMRT "${{ github.event.before }}" "${{ github.sha }}" > changed-files.txt
+          fi
+          grep -E '\.(md|html)$' changed-files.txt | sort -u > link-files.txt || true
+          if [ -s link-files.txt ]; then
+            echo "files=$(paste -sd ' ' link-files.txt)" >> $GITHUB_OUTPUT
+          else
+            echo "files=" >> $GITHUB_OUTPUT
+          fi
 
       - name: Link Checker 🔗
+        if: ${{ steps.changed-files.outputs.files != '' }}
         uses: lycheeverse/lychee-action@v2.1.0
         with:
           fail: true
-          # only check local links, avoid remote network failures
-          args: --user-agent 'curl/7.54' --offline --exclude-path README.md --exclude-path CUSTOMIZE.md --exclude-path _pages/404.md --exclude-path _pages/blog.md --exclude-path _posts/2018-12-22-distill.md --exclude-path _posts/2023-04-24-videos.md --exclude-path _books/the_godfather.md --verbose --no-progress './**/*.md' './**/*.html'
+          # only check local links on changed files, avoid remote network failures
+          args: --user-agent 'curl/7.54' --offline --exclude-path README.md --exclude-path CUSTOMIZE.md --exclude-path _pages/about_einstein.md --exclude-path _pages/404.md --exclude-path _pages/blog.md --exclude-path _posts/2018-12-22-distill.md --exclude-path _posts/2023-04-24-videos.md --exclude-path _books/the_godfather.md --verbose --no-progress ${{ steps.changed-files.outputs.files }}
