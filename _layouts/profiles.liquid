@@ -31,17 +31,33 @@ layout: page
   /* 新增网格布局样式 */
   .profile-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 180px), 1fr));
     gap: 20px;
     margin-top: 2rem;
   }
   .profile-card {
     text-align: center;
+    min-width: 0;
   }
   .profile-card img {
-    width: 150px !important;
-    height: 150px !important;
-    border-radius: {% if member.image_circular %}50%{% else %}5px{% endif %};
+    width: min(100%, 150px) !important;
+    height: auto !important;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+    border-radius: {% if member.image_circular %}50%{% else %}8px{% endif %};
+  }
+
+  @media (max-width: 767px) {
+    .profile-grid {
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 12px;
+    }
+
+    .profile-card img {
+      width: min(100%, 120px) !important;
+    }
   }
 
 

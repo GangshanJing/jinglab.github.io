@@ -5,6 +5,48 @@
 
 
 
+@inproceedings{ding2026sparse,
+  pdf={Sparse_Action_Dependent_Po.pdf}, 
+  bibtexshow = {true},
+  abbr = {UAI},
+  title={Sparse Action-Dependent Policy Iteration under Coordination Structures: Convergence and Optimality},
+  author={Ding, Jianglin and Tang, Jingcheng and Jing, Gangshan},
+  booktitle={Forty-Second Annual Conference on Uncertainty in Artificial Intelligence},
+  abstract = {Action-dependent policies, which condition decisions of each agent on both states and other agents’ actions, provide a powerful structured framework for cooperative multi-agent reinforcement learning (MARL). Most existing studies have focused on auto-regressive formulations, where each agent’s policy depends on the actions of all preceding agents. However, this structure suffers from severe scalability limitations as the number of agents grows. In contrast, the theoretical foundations of sparse dependency structures remain largely unexplored. To address this gap, we introduce the Action Dependency Graph (ADG) to model sparse inter-agent dependencies. We propose a refined equilibrium concept with respect to the ADG that is stronger than the Nash equilibrium which often traps independent policies. Furthermore, within Coordination Graphs (CG) structured problems, we show that such an equilibrium attains global optimality when the ADG satisfies specific CGinduced conditions. To substantiate our theory, we develop a tabular multi-agent policy iteration algorithm that converges to the refined equilibrium exactly as predicted. We further extend our approach to deep MARL, confirming that these structural conditions provide a reliable design principle for scalable and optimal coordination.},
+  year={2026},
+  selected={true}
+}
+
+@article{tan2026memoact,
+  pdf={RAL_smard_hand.pdf},
+  bibtexshow = {true},
+  abbr = {IEEE RAL},
+  title={MemoAct: Atkinson-Shiffrin-Inspired Hierarchical Memory-Augmented Policy for Robotic Manipulation},
+  author={Tan, Liufan and Li, Jiale and Jing, Gangshan},
+  journal={IEEE Robotics and Automation Letters},
+  month = july,
+  year={2026},
+  doi = {10.1109/LRA.2026.3719233},
+  publisher={IEEE},
+  abstract = {Memory-augmented robotic policies are essential in handling memory-dependent tasks. However, existing approaches typically rely on simply extending the observation window, struggling to simultaneously achieve precise task-state tracking and robust long-horizon retention. To overcome these challenges, inspired by the Atkinson–Shiffrin memory model, we propose MemoAct, a hierarchical memory-augmented policy that leverages distinct memory tiers to tackle specific bottlenecks. Specifically, sensory memory filters immediate perceptual inputs, lossless short-term memory supports precise task-state tracking, and compressed long-term memory facilitates robust long-horizon retention. To enrich the evaluation landscape, we construct MemoryRTBench based on RoboTwin 2.0, comprising 6 manipulation tasks that systematically evaluate policy memory capabilities across three dimensions: sequential, spatial, and episodic memory. Extensive experiments across simulated and real-world scenarios demonstrate that MemoAct achieves superior performance compared to both existing Markovian baselines and history-aware policies.}
+}
+
+@article{he2026distributed,
+  pdf={Non-Uniform_Scaling_Control.pdf},
+  bibtexshow = {true},
+  abbr = {IEEE TAC},
+  title={Distributed Non-Uniform Scaling Control of Multi-Agent Formation via Matrix-Valued Constraints},
+  author={He, Tao and Jing, Gangshan},
+  journal={IEEE Transactions on Automatic Control},
+  month = apr,
+  year={2026},
+  doi = {10.1109/TAC.2026.3696192},
+  publisher={IEEE},
+  selected={true},
+  abstract = {Distributed formation maneuver control refers to the problem of maneuvering a group of agents to change their formation shape by adjusting the motions of partial agents, where the controller of each agent only requires local information measured from its neighbors. Although this problem has been extensively investigated, existing approaches are mostly limited to uniform scaling transformations. This article proposes a new type of local matrix-valued constraints, via which non-uniform scaling control of position formation can be achieved by tuning the positions of only two agents (i.e., leaders). Here, the non-uniform scaling transformation refers to global scaling the position formation with different ratios along different orthogonal coordinate directions. Moreover, by defining scaling and translation of attitudes, we propose a distributed control scheme for scaling and translation maneuver control of joint position-attitude formations. It is proven that the proposed controller achieves global convergence, provided that the sensing graph among agents is a 2-rooted bidirectional graph. Compared with the affine formation maneuver control approach, the proposed approach leverages a sparser sensing graph, requires fewer leaders, and additionally enables scaling transformations of the attitude formation. A simulation example demonstrates our theoretical results.}
+}
+
+
 @article{huang2026TAC,
   pdf={Signed_Angle_Rigid_Graphs.pdf},
   bibtexshow = {true},

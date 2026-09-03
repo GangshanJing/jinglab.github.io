@@ -36,6 +36,8 @@ nav_order: 7
 
     <p>本课题组同时在重庆大学自动化学院和数学与统计学院招收研究生。对于工科背景的同学，希望你已经积累了相当的机器人相关工程实践经验；对于数学背景的同学，希望你有扎实的数学基础和对机器人领域浓厚的兴趣。</p>
 
+    <strong>对于申请推荐免试研究生的同学，报名之前请先邮件联系。如果你发送的邮件没有收到回复，建议不要在系统里报名。</strong>.
+
     <p>If you are interested, please send your CV to <a href="mailto:jinggangshan@cqu.edu.cn" style="color:#054469; text-decoration:underline;">jinggangshan@cqu.edu.cn</a>. For graduate (PhD or Master) applications, please attach all your academic transcripts. </p>
     <p>Due to the large number of inquiries, only shortlisted candidates will be contacted. Thank you for your understanding.</p>
     <p style="margin-top:2rem;">Best wishes on your position search!<br>— Gangshan Jing</p>

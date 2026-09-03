@@ -36,22 +36,36 @@ body.sticky-bottom-footer {
 
 .profile-grid {
   display: grid;
-  grid-template-columns: repeat(5, minmax(300px, 1fr)) !important;
-
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+  margin-top: 2rem;
+  justify-items: start;
+  align-items: start;
 
   .profile-card {
-    text-align: center;
+    text-align: left;
+    min-width: 0;
+    width: 100%;
     img {
-      width: 200px;
-      height: 200px;
+      width: min(100%, 150px);
+      height: auto;
+      aspect-ratio: 1 / 1;
       object-fit: cover;
-      margin-bottom: 1rem;
+      display: block;
+      margin: 0 0 1rem;
       &.rounded-circle { border-radius: 50%; }
     }
     .more-info {
       font-size: 0.9rem;
       color: var(--global-text-color-light);
     }
+  }
+}
+
+@media (max-width: 767px) {
+  .profile-grid {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 12px;
   }
 }
 

@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Our paper "Beyond Nash Equilibrium: G-Equilibrium via Action-Dependent Policies in Cooperative Markov Games" has been accepted by Conference on 2026 65th IEEE Conference on Decision and Control (CDC), to be held in Honolulu, Hawaii, USA, 2026.
+Our paper "Beyond Nash Equilibrium: G-Equilibrium via Action-Dependent Policies in Cooperative Markov Games" has been accepted by Conference on 2026 65th IEEE Conference on Decision and Control (CDC), to be held in Honolulu, Hawaii, USA, 2026. 

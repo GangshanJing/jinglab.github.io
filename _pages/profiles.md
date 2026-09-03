@@ -13,11 +13,11 @@ groups:
   - title: Principle Investigator
     columns: 4
     members:
-      - name: Gangshan Jing
+      - name: Gangshan Jing (井冈山)
         image: GangshanJing.jpg
         image_circular: false
 
-  - title: Graduate Students/Multi-Agent Formation Control
+  - title: PhD Students
     columns: 4
     members:
       - name: Tao He (何陶)
@@ -26,6 +26,18 @@ groups:
         image_circular: false
         more_info: >
           Formation Maneuver in Dynamic Environments
+      - name: Lin Yuan (袁林)
+        role: PhD Student
+        image: LinYuan.jpg
+        image_circular: false
+        more_info: >
+          Data-Driven Multi-Agent Control
+      - name: Songlin Liao (廖崧琳)
+        role: PhD Student
+        image: SonglinLiao.jpg
+        image_circular: false
+        more_info: >
+          Advanced Sensing and Localization
       - name: Gen He (何根)
         role: PhD Student (Joint with Prof. Yongduan Song)
         image: GenHe.jpg
@@ -38,6 +50,24 @@ groups:
         image_circular: false
         more_info: >
           Graph Rigidity Theory for Multi-Agent Coordination
+      - name: Xinan Rong (荣新岸)
+        role: PhD Student
+        image: XinanRong.jpg
+        image_circular: false
+        more_info: >
+          Cooperative Manipulation
+
+
+
+  - title: Master Students
+    columns: 4
+    members:
+      - name: Jingfeng Wang (王景峰)
+        role: Master Student
+        image: JingfengWang.jpg
+        image_circular: false
+        more_info: >
+          Coorperative Localization for Multi-Robot Systems
       - name: Hanyue Huang (黄涵月)
         role: Master Student
         image: HanyueHuang.jpg
@@ -50,46 +80,6 @@ groups:
         image_circular: false
         more_info: >
           Multi-Robot Motion Planning
-
-
-  - title: Graduate Students/Multi-Agent Reinforcement Learning
-    columns: 4
-    members:
-      - name: Lin Yuan (袁林)
-        role: PhD Student
-        image: LinYuan.jpg
-        image_circular: false
-        more_info: >
-          Data-Driven Multi-Agent Control
-      - name: Jianglin Ding (丁江林)
-        role: Master Student
-        image: JianglinDing.jpg
-        image_circular: false
-        more_info: >
-          Optimality of MARL
-      - name: Peng Zhou (周鹏)
-        role: Master Student
-        image: PengZhou.jpg
-        image_circular: false
-        more_info: >
-          Scalable MARL
-      - name: Yijie Hao (郝奕洁)
-        role: Master Student
-        image: YijieHao.jpg
-        image_circular: false
-        more_info: >
-          Optimality of MARL
-
-
-  - title: Graduate Students/Robotic Manipulation
-    columns: 4
-    members:
-      - name: Xinan Rong (荣新岸)
-        role: PhD Student
-        image: XinanRong.jpg
-        image_circular: false
-        more_info: >
-          In-Hand Manipulation
       - name: Aochen He (贺傲晨)
         role: Master Student
         image: AochenHe.jpg
@@ -101,7 +91,7 @@ groups:
         image: JialongLiu.jpg
         image_circular: false
         more_info: >
-          Manipulation in Dynamic Environments
+          Teleoperation for Manipulation 
       - name: Shihao He (贺世豪)
         role: Master Student
         image: ShihaoHe.jpg
@@ -114,38 +104,18 @@ groups:
         image_circular: false
         more_info: >
           Learning-Based Manipulation
-
-  - title: Graduate Students/Localization
-    columns: 4
-    members:
-      - name: Songlin Liao (廖崧琳)
-        role: PhD Student
-        image: SonglinLiao.jpg
-        image_circular: false
-        more_info: >
-          Advanced Sensing and Localization
-      - name: Jingfeng Wang (王景峰)
-        role: Master Student
-        image: JingfengWang.jpg
-        image_circular: false
-        more_info: >
-          Coorperation Localization for Multi-Robot Systems
       - name: Qiuxin Huang (黄秋鑫)
         role: Master Student
         image: QiuxinHuang.jpg
         image_circular: false
         more_info: >
-          Magnetic Localization
-  
-
-  - title: Undergraduate Students
-    columns: 4
-    members:
-      - name: Xiaolong Li (李小龙)
-        image: XiaolongLi.jpg
+          Localization and Motion Planning
+      - name: Yijie Hao (郝奕洁)
+        role: Master Student
+        image: YijieHao.jpg
         image_circular: false
         more_info: >
-          In-Hand Manipulation
+          Optimality of MARL
 
 # 新增 alumni 数据组（与 groups 平级）
 alumni:
@@ -161,4 +131,10 @@ alumni:
   - name: "李蒙蒙"
     year: "2022届硕"
     affiliation: "西湖大学，助理研究员，杭州"
+  - name: "丁江林"
+    year: "2023届硕"
+    affiliation: "香港城市大学，助理研究员，香港"
+  - name: "周鹏"
+    year: "2023届硕"
+    affiliation: "意界智创，机器人强化学习算法工程师，深圳"
 ---

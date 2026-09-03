@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Our paper "[MemoAct: Atkinson–Shiffrin-Inspired Hierarchical Memory-Augmented Policy for Robotic Manipulation](https://memoact-project.github.io/MemoActPage/)" has been accepted by IEEE Robotics and Automation Letters. 
+Our paper "[MemoAct: Atkinson–Shiffrin-Inspired Hierarchical Memory-Augmented Policy for Robotic Manipulation](https://tlf-tlf.github.io/MemoActPage/)" has been accepted by IEEE Robotics and Automation Letters. 
